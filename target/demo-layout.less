@@ -1,0 +1,158 @@
+    //Position
+.demo-relative {
+    position: relative;
+}
+
+.demo-absolute {
+    position: absolute;
+}
+
+
+.demo-translate(@args){
+    -moz-transform: @args ;
+    -ms-transform: @args;
+    -o-transform: @args;
+    -webkit-transform: @args;
+    transform: @args;
+}
+
+.demo-center-element {
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    .demo-translate(translateX(-50%) translateY(-50%));
+}
+
+
+.demo-center-element-X {
+    left: 50%;
+    position: absolute;
+    .demo-translate(translateX(-50%));
+}
+
+.demo-center-element-Y {
+    top: 50%;
+    position: absolute;
+    .demo-translate(translateY(-50%));
+}
+
+//Circle
+.demo-circle(@radius) {
+    border-radius: 50%;
+    width: @radius*2px;
+    height: @radius*2px;
+}
+
+//Flex
+.demo-flex(@values) {
+    -webkit-box-flex: @values;
+    -moz-box-flex: @values;
+    -webkit-flex: @values;
+    -ms-flex: @values;
+    flex: @values;
+}
+
+.demo-flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    //Chrome bug fix
+    min-height: 0;
+    min-width: 0;
+}
+
+.demo-flex-v-stack {
+    .demo-flex;
+    height: auto;
+    width: auto;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.demo-flex-wrap {
+    .demo-flex;
+    height: auto;
+    width: auto;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.demo-flex-row {
+     .demo-flex;
+    overflow-y: auto;
+}
+
+.demo-flex-row-1 {
+     .demo-flex-row;
+    .demo-flex-mx(1 1 0%);
+}
+
+.demo-flex-row-2 {
+     .demo-flex-row;
+    .demo-flex-mx(2 1 0%);
+}
+
+.demo-flex-row-3 {
+     .demo-flex-row;
+    .demo-flex-mx(3 1 0%);
+}
+
+.demo-flex-h-stack {
+     .demo-flex;
+    height: auto;
+    width: auto;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
+.demo-flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.demo-flex-col {
+     .demo-flex;
+    overflow-x: auto;
+}
+
+.demo-flex-col-1 {
+     .demo-flex-col;
+    .demo-flex-mx(1 1 0%);
+}
+
+.demo-flex-col-2 {
+     .demo-flex-col;
+    .demo-flex-mx(2 1 0%);
+}
+
+.demo-flex-col-3 {
+     .demo-flex-col;
+    .demo-flex-mx(3 1 0%);
+}
+
+.demo-flex-col-10 {
+     .demo-flex-col;
+    .demo-flex-mx(10 1 0%);
+}
+
+
+//Stretch layout
+
+.demo-stretch-x {
+    width: 100%;
+}
+
+.demo-stretch-y {
+    height: 100%;
+}
+
+
+.demo-scroll {
+    overflow-y: scroll;
+}

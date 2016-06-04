@@ -1,0 +1,158 @@
+//Position
+.##CompName##-relative {
+    position: relative;
+}
+
+.##CompName##-absolute {
+    position: absolute;
+}
+
+
+##MIX####CompName##-translate(##VAR##args){
+    -moz-transform: ##VAR##args ;
+    -ms-transform: ##VAR##args;
+    -o-transform: ##VAR##args;
+    -webkit-transform: ##VAR##args;
+    transform: ##VAR##args;
+}
+
+##MIX####CompName##-center-element {
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    ##INCLUDE####CompName##-translate(translateX(-50%) translateY(-50%));
+}
+
+
+##MIX####CompName##-center-element-X {
+    left: 50%;
+    position: absolute;
+    ##INCLUDE####CompName##-translate(translateX(-50%));
+}
+
+##MIX####CompName##-center-element-Y {
+    top: 50%;
+    position: absolute;
+    ##INCLUDE####CompName##-translate(translateY(-50%));
+}
+
+//Circle
+##MIX####CompName##-circle(##VAR##radius) {
+    border-radius: 50%;
+    width: ##VAR##radius*2px;
+    height: ##VAR##radius*2px;
+}
+
+//Flex
+##MIX####CompName##-flex(##VAR##values) {
+    -webkit-box-flex: ##VAR##values;
+    -moz-box-flex: ##VAR##values;
+    -webkit-flex: ##VAR##values;
+    -ms-flex: ##VAR##values;
+    flex: ##VAR##values;
+}
+
+.##CompName##-flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    //Chrome bug fix
+    min-height: 0;
+    min-width: 0;
+}
+
+.##CompName##-flex-v-stack {
+    ##EXTEND##.##CompName##-flex;
+    height: auto;
+    width: auto;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.##CompName##-flex-wrap {
+    ##EXTEND##.##CompName##-flex;
+    height: auto;
+    width: auto;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.##CompName##-flex-row {
+    ##EXTEND## .##CompName##-flex;
+    overflow-y: auto;
+}
+
+.##CompName##-flex-row-1 {
+    ##EXTEND## .##CompName##-flex-row;
+    ##INCLUDE####CompName##-flex-mx(1 1 0%);
+}
+
+.##CompName##-flex-row-2 {
+    ##EXTEND## .##CompName##-flex-row;
+    ##INCLUDE####CompName##-flex-mx(2 1 0%);
+}
+
+.##CompName##-flex-row-3 {
+    ##EXTEND## .##CompName##-flex-row;
+    ##INCLUDE####CompName##-flex-mx(3 1 0%);
+}
+
+.##CompName##-flex-h-stack {
+    ##EXTEND## .##CompName##-flex;
+    height: auto;
+    width: auto;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
+.##CompName##-flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.##CompName##-flex-col {
+    ##EXTEND## .##CompName##-flex;
+    overflow-x: auto;
+}
+
+.##CompName##-flex-col-1 {
+    ##EXTEND## .##CompName##-flex-col;
+    ##INCLUDE####CompName##-flex-mx(1 1 0%);
+}
+
+.##CompName##-flex-col-2 {
+    ##EXTEND## .##CompName##-flex-col;
+    ##INCLUDE####CompName##-flex-mx(2 1 0%);
+}
+
+.##CompName##-flex-col-3 {
+    ##EXTEND## .##CompName##-flex-col;
+    ##INCLUDE####CompName##-flex-mx(3 1 0%);
+}
+
+.##CompName##-flex-col-10 {
+    ##EXTEND## .##CompName##-flex-col;
+    ##INCLUDE####CompName##-flex-mx(10 1 0%);
+}
+
+
+//Stretch layout
+
+.##CompName##-stretch-x {
+    width: 100%;
+}
+
+.##CompName##-stretch-y {
+    height: 100%;
+}
+
+
+.##CompName##-scroll {
+    overflow-y: scroll;
+}

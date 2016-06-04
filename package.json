@@ -1,0 +1,22 @@
+{
+  "name": "css-sass-less-layout",
+  "version": "1.0.0",
+  "description": "sass or less layout careator - using templates.txt file ",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-prompt": "^0.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "yargs": "^4.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "layout"
+  ],
+  "author": "Orr The Frohlich! thefrohlich@gmail.com",
+  "license": "ISC"
+}
